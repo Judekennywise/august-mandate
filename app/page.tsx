@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { DotGrid, LogoMark } from "./components/artwork";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -42,6 +44,11 @@ const pillars = [
   {
     title: "Media & Technology Training",
     text: "Hands-on training in relevant media and technology skills — opening doors to employment, entrepreneurship, and creative careers.",
+    image: {
+      src: "/images/banner-training.jpg",
+      alt: "A teenager filming outdoors with a camera mounted on a stabiliser",
+      position: "object-[50%_30%]",
+    },
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-8 w-8">
         <rect x="2" y="4" width="20" height="14" rx="2" />
@@ -52,6 +59,11 @@ const pillars = [
   {
     title: "Discipleship & Mentorship",
     text: "Godly discipleship and continuous mentorship that walk with each participant far beyond the one-week August training.",
+    image: {
+      src: "/images/banner-mentorship.jpg",
+      alt: "A tutor leaning over a desk to explain a lesson to two students",
+      position: "object-[50%_40%]",
+    },
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-8 w-8">
         <path d="M12 21c-4.5-3.5-8-6.4-8-10a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 11c0 3.6-3.5 6.5-8 10Z" strokeLinecap="round" strokeLinejoin="round" />
@@ -61,6 +73,11 @@ const pillars = [
   {
     title: "Lifelong Opportunities",
     text: "Scholarships, internships, employment pathways, and a supportive community that turn training into lasting transformation.",
+    image: {
+      src: "/images/banner-opportunity.jpg",
+      alt: "Teenagers in school uniform smiling together indoors",
+      position: "object-[50%_35%]",
+    },
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-8 w-8">
         <path d="M12 3v12M12 3l-4 4M12 3l4 4M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4" strokeLinecap="round" strokeLinejoin="round" />
@@ -90,8 +107,11 @@ export default function Home() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-          <Link href="#" className="text-lg font-bold tracking-tight text-slate-900">
-            The <span className="text-amber-600">August</span> Mandate
+          <Link href="#" className="flex items-center gap-2.5 text-lg font-bold tracking-tight text-slate-900">
+            <LogoMark className="h-9 w-9 shrink-0" />
+            <span>
+              The <span className="text-amber-600">August</span> Mandate
+            </span>
           </Link>
           <nav className="hidden gap-8 text-sm font-medium text-slate-600 sm:flex">
             {navLinks.map((link) => (
@@ -119,32 +139,48 @@ export default function Home() {
                 "radial-gradient(circle at 20% 20%, #f59e0b 0, transparent 40%), radial-gradient(circle at 80% 80%, #d97706 0, transparent 40%)",
             }}
           />
-          <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
-            <p className="mb-4 inline-block rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-1 text-sm font-medium text-amber-300">
-              Raising a generation of empowered orphans
-            </p>
-            <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
-              Skills. Discipleship. <span className="text-amber-400">Opportunity.</span>
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
-              The August Mandate empowers orphans and young persons through practical media and
-              technology education — with continuous mentorship, discipleship, and personal
-              development that extends beyond a one-week training programme into a lifelong
-              journey of transformation and opportunity.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#get-involved"
-                className="rounded-full bg-amber-500 px-6 py-3 font-semibold text-slate-900 transition hover:bg-amber-400"
-              >
-                Get Involved
-              </a>
-              <a
-                href="#about"
-                className="rounded-full border border-slate-500 px-6 py-3 font-semibold text-white transition hover:border-amber-400 hover:text-amber-300"
-              >
-                Learn More
-              </a>
+          <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-4 py-24 sm:px-6 sm:py-32 lg:grid-cols-[1.05fr_1fr]">
+            <div>
+              <p className="mb-4 inline-block rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-1 text-sm font-medium text-amber-300">
+                Raising a generation of empowered orphans
+              </p>
+              <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
+                Skills. Discipleship. <span className="text-amber-400">Opportunity.</span>
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+                The August Mandate empowers orphans and young persons through practical media and
+                technology education — with continuous mentorship, discipleship, and personal
+                development that extends beyond a one-week training programme into a lifelong
+                journey of transformation and opportunity.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <a
+                  href="#get-involved"
+                  className="rounded-full bg-amber-500 px-6 py-3 font-semibold text-slate-900 transition hover:bg-amber-400"
+                >
+                  Get Involved
+                </a>
+                <a
+                  href="#about"
+                  className="rounded-full border border-slate-500 px-6 py-3 font-semibold text-white transition hover:border-amber-400 hover:text-amber-300"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+            <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+              <div className="absolute -inset-4 rounded-[3rem] bg-amber-500/20 blur-2xl" />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl ring-1 ring-amber-500/30 shadow-2xl">
+                <Image
+                  src="/images/hero.jpg"
+                  alt="A man showing three boys the screen of his camera outdoors"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 40vw, (min-width: 640px) 28rem, 100vw"
+                  className="object-cover object-[50%_35%]"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
+              </div>
             </div>
           </div>
         </section>
@@ -176,6 +212,50 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          {/* Story collage */}
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            {[
+              {
+                caption: "Media",
+                src: "/images/tile-media.jpg",
+                alt: "A smiling young person reviewing a photograph on a camera screen",
+              },
+              {
+                caption: "Technology",
+                src: "/images/tile-technology.jpg",
+                alt: "Two students in school uniform working together on a laptop",
+              },
+              {
+                caption: "Discipleship",
+                src: "/images/tile-discipleship.jpg",
+                alt: "A teacher leading an outdoor lesson with children seated under trees",
+              },
+              {
+                caption: "Community",
+                src: "/images/tile-community.jpg",
+                alt: "A group of children smiling together outdoors",
+              },
+            ].map((tile) => (
+              <figure
+                key={tile.caption}
+                className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-900"
+              >
+                <div className="relative aspect-square overflow-hidden">
+                  <Image
+                    src={tile.src}
+                    alt={tile.alt}
+                    fill
+                    sizes="(min-width: 640px) 17rem, 48vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <figcaption className="px-4 py-3 text-center text-sm font-semibold text-amber-400">
+                  {tile.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </section>
 
         {/* Pillars */}
@@ -191,13 +271,24 @@ export default function Home() {
               {pillars.map((pillar) => (
                 <div
                   key={pillar.title}
-                  className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition hover:shadow-md"
+                  className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md"
                 >
-                  <div className="mb-5 inline-flex rounded-xl bg-amber-100 p-3 text-amber-700">
-                    {pillar.icon}
+                  <div className="relative aspect-[2/1] w-full bg-slate-900">
+                    <Image
+                      src={pillar.image.src}
+                      alt={pillar.image.alt}
+                      fill
+                      sizes="(min-width: 768px) 22rem, 100vw"
+                      className={`object-cover ${pillar.image.position}`}
+                    />
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-900">{pillar.title}</h3>
-                  <p className="mt-3 leading-relaxed text-slate-600">{pillar.text}</p>
+                  <div className="p-8">
+                    <div className="-mt-14 mb-5 inline-flex rounded-xl bg-amber-100 p-3 text-amber-700 shadow-md ring-4 ring-white">
+                      {pillar.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-slate-900">{pillar.title}</h3>
+                    <p className="mt-3 leading-relaxed text-slate-600">{pillar.text}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -226,8 +317,12 @@ export default function Home() {
         </section>
 
         {/* Get Involved */}
-        <section id="get-involved" className="scroll-mt-20 bg-slate-900 py-20 text-white">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <section
+          id="get-involved"
+          className="relative scroll-mt-20 overflow-hidden bg-slate-900 py-20 text-white"
+        >
+          <DotGrid className="pointer-events-none absolute inset-0 h-full w-full opacity-15" />
+          <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
             <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
               Get Involved
             </h2>
@@ -258,7 +353,10 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-slate-500 sm:flex-row sm:px-6">
-          <p>© {new Date().getFullYear()} The August Mandate. All rights reserved.</p>
+          <p className="flex items-center gap-2.5">
+            <LogoMark className="h-7 w-7 shrink-0" />
+            <span>© {new Date().getFullYear()} The August Mandate. All rights reserved.</span>
+          </p>
           <p>Empowering orphans through media, technology, and discipleship.</p>
         </div>
       </footer>
