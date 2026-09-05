@@ -26,10 +26,10 @@ export default function ContactPage() {
               The fastest way to reach us. We read every message.
             </p>
             <a
-              href="mailto:hello@theaugustmandate.org"
+              href="mailto:theaugustmandate@gmail.com"
               className="mt-4 inline-block text-xl font-semibold text-brand-700 transition hover:text-brand-800"
             >
-              hello@theaugustmandate.org
+              theaugustmandate@gmail.com
             </a>
           </div>
 

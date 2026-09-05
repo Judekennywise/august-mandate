@@ -37,9 +37,9 @@ const coreValues = [
 
 const team = [
   { name: "Shodunke Opeyemi David", role: "Team Lead", image: "/images/team-1.jpeg", position: "object-top" },
+  { name: "Hannah Oniyide Ayomide", role: "Admin & Financial Advisor", image: "/images/team-4.jpeg", position: "object-top" },
   { name: "Shodunke Oluwafikayomi", role: "Team Welfare Manager", image: "/images/team-3.jpeg", position: "object-top" },
   { name: "Oniyide Oluwatosin Ayomikun", role: "Creative Designer", image: "/images/team-2.jpeg", position: "object-top" },
-  { name: "Hannah Oniyide Ayomide", role: "Admin & Financial Advisor", image: "/images/team-4.jpeg", position: "object-top" },
   { name: "Oyemade Adekunle", role: "Cinematographer & Editor", image: "/images/team-5.jpeg", position: "object-top" },
 ];
 

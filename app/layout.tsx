@@ -21,6 +21,15 @@ export const metadata: Metadata = {
   },
   description:
     "The August Mandate equips orphaned children and young adults with media and technology skills, godly discipleship, mentorship, and lifelong opportunities.",
+  icons: {
+    icon: [
+      { url: "/images/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/favicon/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/images/favicon/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/images/favicon/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
