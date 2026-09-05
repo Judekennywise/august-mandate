@@ -24,10 +24,10 @@ export function SiteFooter() {
             discipleship, mentorship, and lifelong opportunity.
           </p>
           <a
-            href="mailto:hello@theaugustmandate.org"
+            href="mailto:theaugustmandate@gmail.com"
             className="mt-4 inline-block font-semibold text-accent-300 transition hover:text-accent-200"
           >
-            hello@theaugustmandate.org
+            theaugustmandate@gmail.com
           </a>
         </div>
 

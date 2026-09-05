@@ -54,7 +54,7 @@ export default function PartnerPage() {
               <h2 className="text-xl font-semibold text-brand-700">{way.title}</h2>
               <p className="mt-3 flex-1 leading-relaxed text-slate-600">{way.text}</p>
               <a
-                href={`mailto:hello@theaugustmandate.org?subject=${encodeURIComponent(way.subject)}`}
+                href={`mailto:theaugustmandate@gmail.com?subject=${encodeURIComponent(way.subject)}`}
                 className="mt-6 inline-block font-semibold text-accent-500 transition hover:text-accent-600"
               >
                 {way.cta} →
@@ -74,7 +74,7 @@ export default function PartnerPage() {
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:hello@theaugustmandate.org?subject=Partnering%20with%20The%20August%20Mandate"
+              href="mailto:theaugustmandate@gmail.com?subject=Partnering%20with%20The%20August%20Mandate"
               className="rounded-full bg-accent-500 px-8 py-4 text-lg font-semibold text-white transition hover:bg-accent-600"
             >
               Email Us
